@@ -8,9 +8,44 @@
     <title>Document</title>
 </head>
 
-<body>
+<!DOCTYPE html>
+<html lang="en">
 
-    <script src="./dist/bundle.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container flex px-32 mt-10 hidden" id="game">
+        <div class="w-1/5  flex-col bg-gray-300 p-10">
+            <p class="font-bold text-lg uppercase mt-2 ">Game:Pokemon</p>
+            <p class="font-bold text-md uppercase mt-2 ">Score: <span id="point"></span> </p>
+            <p class="font-bold text-md uppercase mt-2 ">Time: <span id="timeout"></span> </p>
+            <button class="px-5 py-2 bg-black text-white mt-2 " id="start">Start</button>
+            <button class="px-5 py-2 bg-black text-white mt-2 hidden" id="again">Again</button>
+            <button class="px-5 py-2 bg-black text-white mt-2 ">Exit</button>
+        </div>
+
+        <div class=" w-4/5 flex h-auto justify-center ">
+            <div class="flex flex-wrap text-center  justify-center items-center " id="main"
+                style="height: auto; width: 750px;">
+            </div>
+        </div>
+    </div>
+    <div id="formLogin" class="bg-cover bg-no-repeat h-screen bg-center flex justify-center items-center" style="background-image: url(https://f39-zpg.zdn.vn/5670758153548176938/d3d13293c0ab32f56bba.jpg)">
+        <div>
+            <p class="text-3xl text-white uppercase flex justify-center mb-6 font-bold">L o g i n</p>
+            <div class="w-100 flex justify-center">
+                <form id="form"></form>
+            </div>
+        </div>
+        
+    </div>
+
 </body>
 
 </html>
