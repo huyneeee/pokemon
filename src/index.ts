@@ -29,15 +29,16 @@ import Assigment from './asm';
 // Lab4.bai4();
 
 //lab5 
-// const Lab5 = new lab5()
+const Lab5 = new lab5()
 // Lab5.bai2();
 // Lab5.bai4();
-// Lab5.bai5();
+Lab5.bai5();
 
 // asm
 const asm = new Assigment();
-// asm.Pokemon();
+// asm.play();
 asm.login();
+
 //chap  06
 // console.log('chap06');
 // class GeneralSpells extends General{

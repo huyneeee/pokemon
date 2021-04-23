@@ -5,47 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css//style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container flex px-32 mt-10 hidden" id="game">
-        <div class="w-1/5  flex-col bg-gray-300 p-10">
-            <p class="font-bold text-lg uppercase mt-2 ">Game:Pokemon</p>
-            <p class="font-bold text-md uppercase mt-2 ">Score: <span id="point"></span> </p>
-            <p class="font-bold text-md uppercase mt-2 ">Time: <span id="timeout"></span> </p>
-            <button class="px-5 py-2 bg-black text-white mt-2 " id="start">Start</button>
-            <button class="px-5 py-2 bg-black text-white mt-2 hidden" id="again">Again</button>
-            <button class="px-5 py-2 bg-black text-white mt-2 ">Exit</button>
+    <div class="container mx-auto  flex px-32   bg-cover bg-no-repeat h-screen hidden "
+        style="background-image: url(https://media1.popsugar-assets.com/files/thumbor/TX9naAGOWgoSQM94AidjXrfeyqA/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2021/01/14/843/n/1922507/dc8bfea2c1e7f671_guillaume-galtier-5aklrccCH7w-unsplash/i/Pink-Sky-Zoom-Background.jpg);"
+        id="game">
+        <div class="w-1/5 h-80  flex-col  p-10 border border-white mt-20 text-white z-100">
+            <p class="font-bold text-lg uppercase mt-3 ">Gamer:<span id="nameGamer"></span></p>
+            <p class="font-bold text-md uppercase mt-3 ">Score: <span id="point"></span> </p>
+            <p class="font-bold text-md uppercase mt-3 ">Time: <span id="timeout">300</span> </p>
+            <button class="px-5 py-2 bg-black text-white mt-3 " id="start">Start</button>
+            <button class="px-5 py-2 bg-black text-white mt-3 hidden" id="again">Again</button>
+            <button class="px-5 py-2 bg-black text-white mt-3 " id="exit">Exit</button>
+            <button class="text-white text-sm mt-3 text-pink-400 font-bold focus:outline-none" id="history"><i
+                    class="fas fa-history"></i> H I S T O R Y</button> <br>
+            <button class="text-white text-sm mt-3 text-pink-400 font-bold focus:outline-none" id="ranking"><i
+                    class="fas fa-chart-line"></i> R A N K I N G</button>
         </div>
 
-        <div class=" w-4/5 flex h-auto justify-center ">
-            <div class="flex flex-wrap text-center  justify-center items-center " id="main"
-                style="height: auto; width: 750px;">
+        <div class=" w-4/5 flex h-auto py-20 justify-center ">
+            <div class="flex flex-wrap text-center  justify-center items-center h-auto w-100 " id="main">
             </div>
         </div>
     </div>
-    <div id="formLogin" class="bg-cover bg-no-repeat h-screen bg-center flex justify-center items-center" style="background-image: url(https://f39-zpg.zdn.vn/5670758153548176938/d3d13293c0ab32f56bba.jpg)">
-        <div>
-            <p class="text-3xl text-white uppercase flex justify-center mb-6 font-bold">L o g i n</p>
-            <div class="w-100 flex justify-center">
-                <form id="form"></form>
-            </div>
+    <!-- modal -->
+    <div class=" w-7/12 h-auto bg-gray-100 border border-gray-300 rounded absolute top-20 z-10 left-80 hidden"
+        id="modal_content">
+        <div class="absolute right-3 top-2 ">
+            <button id="btn_delete" class="focus:outline-none"><i class="fas fa-times text-3xl"></i></button>
         </div>
-        
-    </div>
+        <table class="items-center w-full bg-red-300 border-collapse mt-10" id="modal">
 
+        </table>
+    </div>
+    <!-- //form login -->
+    <div id="formLogin" class="bg-cover bg-no-repeat h-screen  bg-center flex justify-center items-center  "
+        style="background-image: url(https://f39-zpg.zdn.vn/5670758153548176938/d3d13293c0ab32f56bba.jpg)">
+        <div class="w-100 flex justify-center">
+            <form class="w-full bg-white rounded-lg" id="form">
+            </form>
+        </div>
+
+
+    </div>
 </body>
 
 </html>
